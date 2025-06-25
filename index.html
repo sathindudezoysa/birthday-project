@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="overlay">
+    <h1 class="title">Happy Birthday Akith</h1>
+    <div id="text-bubble-container"></div>
+    <div id="balloon-container"></div>
+    <div class="wish-form">
+        <input type="text" id="wishInput" placeholder="Type your birthday wish to akith ..." />
+        <button onclick="submitWish()">Send</button>
+    </div>
+  </div>
+  
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+<script>
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAjbxHTInWPNJ3ovS5kGQMnCGFCYdNQcwM",
+  authDomain: "birthday-project-4e3ed.firebaseapp.com",
+  projectId: "birthday-project-4e3ed",
+  storageBucket: "birthday-project-4e3ed.firebasestorage.app",
+  messagingSenderId: "780802466939",
+  appId: "1:780802466939:web:ed193d9281f0ead3e36ede",
+  measurementId: "G-QNQ5VZDQK6"
+};
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
