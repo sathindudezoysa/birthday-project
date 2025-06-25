@@ -40,7 +40,7 @@ function submitWish() {
 firebase.database().ref("wishes").on("child_added", (snapshot) => {
   const msg = snapshot.val().message;
   bubbleMessages.push(msg);
-  createTextBubble(msg);
+  // createTextBubble(msg);
 });
 
 // Optional: Keep generating random wishes
